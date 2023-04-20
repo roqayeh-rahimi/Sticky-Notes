@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+:root {
+    --sticky-1-color: #c0ed38;
+    --sticky-2-color: #ff59ee;
+    --sticky-3-color: #34b6ff;
+    --sticky-4-color: #01bd1e;
+    --sticky-5-color: #a177c3;
+    --sticky-6-color: #bf8b1b;
+    --add-button-color: #1e8b41;
+    --background-color: #dab38c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#bord {
+    min-height: 100vh;
+    background-color: var(--background-color);
+    padding: 7rem;
+}
+
+.add-note {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    padding: 10px 17px;
+    border-radius: 50%;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: var(--add-button-color);
+    color: white;
+}
+.node-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.5rem;
+}
+
+
+.note {
+    max-width: 450px;
+    padding: 3rem;
+    aspect-ratio: .95;
+    background-color: var(--sticky-1-color);
+    color: darkblue;
+    /* font-weight:500; */
+    font-size: 40px;
+    font-family: 'Indie Flower', cursive;
+    line-height: 3.2rem;
+    box-shadow: 6px 10px 50px 6px #0008;
+    transform: rotate(-15deg);
+    transition: scale 80ms ease-in;
+}
+.note:hover{
+    scale: 1.05;
+    z-index: 1;
+}
