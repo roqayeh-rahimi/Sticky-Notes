@@ -43,28 +43,18 @@
 .add-note:active{
     scale: 0.95;
 }
-
 .note-list{
-    /* display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 1.5rem; */
     display: flex;
-    /* margin: 10px 30px; */
     justify-content: space-between;
-    /* align-items: center; */
     align-content: center ;
     flex-wrap: wrap;
 }
-
-
 .note {
     width: 350px;
     padding: 2rem;
     aspect-ratio: 1.5;
-    /* max-height: 400px; */
     background-color: var(--sticky-1-color);
     color: darkblue;
-    /* font-weight:500; */
     font-size: 25px;
     font-family: 'Indie Flower', cursive;
     line-height: 2.2rem;
@@ -75,4 +65,49 @@
 .note:hover{
     scale: 1.05;
     z-index: 1;
+}
+.overlay{
+    --box-size:300px;
+    position: fixed;
+    top: calc((100vh - var(--box-size))/2);
+    left: calc((100vw - var(--box-size))/2);
+    width:var(--box-size);
+    aspect-ratio: 1;
+    background-color: white;
+    box-shadow: 10px 10px 30px #0008;
+    display: flex;
+    flex-direction: column;
+}
+.form-nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.form-nav i{
+    padding: 0 10px;
+    font-size: 30px;
+    color:#254e1e;
+    border-radius: 50%;
+    margin:5px 0 ;
+    cursor: pointer;
+    transition: scale 80ms ease-in;
+    user-select: none;
+}
+.form-nav i:active{
+    scale: .95;
+}
+#close{
+    color:#502424;
+}
+textarea{
+    width: 100%;
+    height: calc(var(--box-size) - 50px) ;
+    border:none;
+    resize: none;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+    color:#444;
+    padding:0 10px;
+    outline: none;
 }
