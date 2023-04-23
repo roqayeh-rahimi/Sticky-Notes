@@ -34,7 +34,16 @@
     font-weight: bold;
     background-color: var(--add-button-color);
     color: white;
+    cursor: pointer;
+    transition: scale .05s ease-in ;
 }
+.add-note:hover{
+    background-color: #029b19 ;
+}
+.add-note:active{
+    scale: 0.95;
+}
+
 .note-list{
     /* display: grid;
     grid-template-columns: repeat(4,1fr);
