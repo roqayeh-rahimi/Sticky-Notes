@@ -15,12 +15,22 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    word-break: break-all;
 }
 
 #bord {
     min-height: 100vh;
     background-color: var(--background-color);
     padding: 7rem;
+}
+#bord.disable::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #33333387;
 }
 
 .add-note {
@@ -77,6 +87,7 @@
     box-shadow: 10px 10px 30px #0008;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 .form-nav{
     width: 100%;
@@ -110,4 +121,7 @@ textarea{
     color:#444;
     padding:0 10px;
     outline: none;
+}
+.display-none{
+    display: none ;
 }
